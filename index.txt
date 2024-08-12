@@ -42,19 +42,19 @@ My job is to build your website so that it is functional and user-friendly but a
 What i'm doing
 
 alt = design icon
-Web design
+Explotary Data Analysis
 The most modern and high-quality design made at a professional level.
 
 alt = Web development icon
-Web development
+Data Visualization
 High-quality development of sites at the professional level.
 
 alt = mobile app icon
-Mobile apps
+Mechine Learning
 Professional development of applications for iOS and Android.
 
 alt = camera icon
-Photography
+Deep Learning
 I make high-quality photos of any category at a professional level.
 
 
