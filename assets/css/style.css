@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @kalimullah
+ * copyright 2022 @codewithsadee
  */
 
 
@@ -1114,6 +1114,41 @@ main {
   line-height: 1.6;
 }
 
+/* Styling for the eye icon overlay */
+.project-item-icon-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Parent container to hold the image and the icon */
+.project-img {
+  position: relative;
+  overflow: hidden; /* Ensure image fits in the container */
+}
+
+/* Image styling with hover effects */
+.project-img img {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for transform and opacity */
+}
+
+/* Eye icon and image zoom effect on hover */
+.project-img:hover .project-item-icon-box {
+  opacity: 1; /* Eye icon appears on hover */
+}
+
+.project-img:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.8; /* Slightly decrease image opacity */
+}
+
+
 
 
 
@@ -1592,6 +1627,104 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .modal-avatar-box img { width: 80px; }
+
+ .certification-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); /* Adjust 300px as needed */
+  gap: 30px; /* Match portfolio gap */
+  justify-content: center;
+  margin-bottom: 10px; /* Match portfolio margin */
+}
+
+.certification-item {
+  display: none; /* Initially hide certifications */
+}
+
+.certification-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards; /* Use the same animation as portfolio */
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+
+.certification-img {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Match portfolio height */
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.certification-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.certification-item:hover .certification-img::before { background: hsla(0, 0%, 0%, 0.5); } /* Match hover effect */
+
+.certification-item-icon-box {
+  --scale: 0.8;
+
+  background: var(--jet);
+  color: var(--orange-yellow-crayola);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(var(--scale));
+  font-size: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.certification-item:hover .certification-item-icon-box {
+  --scale: 1;
+  opacity: 1;
+}
+
+.certification-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
+
+.certification-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
+
+.certification-item:hover img { transform: scale(1.1); } /* Match hover scale effect */
+
+.certification-title,
+.certification-category {
+  text-align: center; /* Center align titles and categories */
+  margin-left: 10px; /* Match margin */
+}
+
+.certification-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+
+.certification-category {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+}
 
 
 
