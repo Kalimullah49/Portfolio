@@ -5,7 +5,7 @@
 ![NLP Focus](https://img.shields.io/badge/Focus-NLP-important) 
 ![Continuous Learning](https://img.shields.io/badge/Lifelong-Learning-blue)
 
-**Your AI-Powered Journey from Coding Novice to Confident Developer**
+**Your AI-Poswered Journey from Coding Novice to Confident Developer**
 
 ## 🔍 Overview
 This repository presents a structured learning framework leveraging GPT-based AI as your:
